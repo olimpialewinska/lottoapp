@@ -23,7 +23,6 @@ class _EkranLadowaniaState extends State<EkranLadowania> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Image(image: AssetImage('icons/lotteryapp.png')),
-              Padding(padding: EdgeInsets.only(top: 40)),
             ],
           )),
     );
@@ -36,6 +35,7 @@ class _EkranLadowaniaState extends State<EkranLadowania> {
 
   Future<void> loadData() async {
     String url = 'http://serwis.mobilotto.pl/mapi_v6/index.php?json=getGames';
+
 
     http.Response response = await http.get(Uri.parse(url));
 
@@ -52,8 +52,8 @@ class _EkranLadowaniaState extends State<EkranLadowania> {
 class Lotto {
   String data ="";
   String dataP ="";
-  List<String> liczby = <String>[];
-  List<String> liczbyP = <String>[];
+  List<int> liczby = <int>[];
+  List<int> liczbyP = <int>[];
 
 
 
@@ -63,19 +63,18 @@ class Lotto {
     String numerkiP = jsonBody['LottoPlus']['numerki'].toString();
     String zladataP = jsonBody['LottoPlus']['data_losowania'].toString();
     data = datalosowania(zladata);
-    print(data);
     liczby= splitsort(numerki);
-    print(liczby);
     liczbyP= splitsort(numerkiP);
-    print(liczbyP);
     dataP = datalosowania(zladataP);
 
   }
 
-  List<String> splitsort(String a){
+  List<int> splitsort(String a){
+
     var tablica = a.split(",");
-    tablica.sort();
-    return tablica;
+    List <int> lint = tablica.map(int.parse).toList();
+    lint.sort();
+    return lint;
   }
   String datalosowania(String a){
     String nowadata="";

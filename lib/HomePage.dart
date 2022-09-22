@@ -22,7 +22,7 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     screens = [ //kolekcja
       LottoScreen(lotto: widget.lotto),
-      EJ(),
+      MiniLotto(),
     ];
     super.initState();
   }
