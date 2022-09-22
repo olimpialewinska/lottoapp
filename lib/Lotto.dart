@@ -42,7 +42,7 @@ class _LottoScreenState extends State<LottoScreen> {
                         radius: 20.0,
                         child: Center(
                           child: Container(
-                              child: Text(widget.lotto.liczby[0],
+                              child: Text(widget.lotto.liczby[0].toString(),
                                   style: GoogleFonts.lato(
                                       textStyle: TextStyle(
                                           fontSize: 16.0,
@@ -57,7 +57,7 @@ class _LottoScreenState extends State<LottoScreen> {
                         radius: 20.0,
                         child: Center(
                           child: Container(
-                              child: Text(widget.lotto.liczby[1],
+                              child: Text(widget.lotto.liczby[1].toString(),
                                   style: GoogleFonts.lato(
                                       textStyle: TextStyle(
                                           fontSize: 16.0,
@@ -72,7 +72,7 @@ class _LottoScreenState extends State<LottoScreen> {
                         radius: 20.0,
                         child: Center(
                           child: Container(
-                              child: Text(widget.lotto.liczby[2],
+                              child: Text(widget.lotto.liczby[2].toString(),
                                   style: GoogleFonts.lato(
                                       textStyle: TextStyle(
                                           fontSize: 16.0,
@@ -87,7 +87,7 @@ class _LottoScreenState extends State<LottoScreen> {
                         radius: 20.0,
                         child: Center(
                           child: Container(
-                              child: Text(widget.lotto.liczby[3],
+                              child: Text(widget.lotto.liczby[3].toString(),
                                   style: GoogleFonts.lato(
                                       textStyle: TextStyle(
                                           fontSize: 16.0,
@@ -102,7 +102,7 @@ class _LottoScreenState extends State<LottoScreen> {
                         radius: 20.0,
                         child: Center(
                           child: Container(
-                              child: Text(widget.lotto.liczby[4],
+                              child: Text(widget.lotto.liczby[4].toString(),
                                   style: GoogleFonts.lato(
                                       textStyle: TextStyle(
                                           fontSize: 16.0,
@@ -117,7 +117,7 @@ class _LottoScreenState extends State<LottoScreen> {
                         radius: 20.0,
                         child: Center(
                           child: Container(
-                              child: Text(widget.lotto.liczby[5],
+                              child: Text(widget.lotto.liczby[5].toString(),
                                   style: GoogleFonts.lato(
                                       textStyle: TextStyle(
                                           fontSize: 16.0,
@@ -149,7 +149,7 @@ class _LottoScreenState extends State<LottoScreen> {
                         radius: 15.0,
                         child: Center(
                           child: Container(
-                              child: Text(widget.lotto.liczbyP[0],
+                              child: Text(widget.lotto.liczbyP[0].toString(),
                                   style: GoogleFonts.lato(
                                       textStyle: TextStyle(
                                           fontSize: 12.0,
@@ -164,7 +164,7 @@ class _LottoScreenState extends State<LottoScreen> {
                         radius: 15.0,
                         child: Center(
                           child: Container(
-                              child: Text(widget.lotto.liczbyP[1],
+                              child: Text(widget.lotto.liczbyP[1].toString(),
                                   style: GoogleFonts.lato(
                                       textStyle: TextStyle(
                                           fontSize: 12.0,
@@ -179,7 +179,7 @@ class _LottoScreenState extends State<LottoScreen> {
                         radius: 15.0,
                         child: Center(
                           child: Container(
-                              child: Text(widget.lotto.liczbyP[2],
+                              child: Text(widget.lotto.liczbyP[2].toString(),
                                   style: GoogleFonts.lato(
                                       textStyle: TextStyle(
                                           fontSize: 12.0,
@@ -194,7 +194,7 @@ class _LottoScreenState extends State<LottoScreen> {
                         radius: 15.0,
                         child: Center(
                           child: Container(
-                              child: Text(widget.lotto.liczbyP[3],
+                              child: Text(widget.lotto.liczbyP[3].toString(),
                                   style: GoogleFonts.lato(
                                       textStyle: TextStyle(
                                           fontSize: 12.0,
@@ -209,7 +209,7 @@ class _LottoScreenState extends State<LottoScreen> {
                         radius: 15.0,
                         child: Center(
                           child: Container(
-                              child: Text(widget.lotto.liczbyP[4],
+                              child: Text(widget.lotto.liczbyP[4].toString(),
                                   style: GoogleFonts.lato(
                                       textStyle: TextStyle(
                                           fontSize: 12.0,
@@ -224,7 +224,7 @@ class _LottoScreenState extends State<LottoScreen> {
                         radius: 15.0,
                         child: Center(
                           child: Container(
-                              child: Text(widget.lotto.liczbyP[5],
+                              child: Text(widget.lotto.liczbyP[5].toString(),
                                   style: GoogleFonts.lato(
                                       textStyle: TextStyle(
                                           fontSize: 12.0,

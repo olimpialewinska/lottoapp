@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class EJ extends StatefulWidget {
+class MiniLotto extends StatefulWidget {
   @override
-  State<EJ> createState() => _EJState();
+  State<MiniLotto> createState() => _MiniLottoState();
 }
 
-class _EJState extends State<EJ> {
+class _MiniLottoState extends State<MiniLotto> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -106,36 +106,7 @@ class _EJState extends State<EJ> {
                                           height: 1.2)))),
                         ),
                       ),
-                      Padding(padding: EdgeInsets.only(right: 12)),
-                      CircleAvatar(
-                        backgroundColor: Colors.lightBlueAccent,
-                        radius: 18.0,
-                        child: Center(
-                          child: Container(
-                              child: Text("3",
-                                  style: GoogleFonts.lato(
-                                      textStyle: TextStyle(
-                                          fontSize: 16.0,
-                                          color: Colors.black,
-                                          fontWeight: FontWeight.bold,
-                                          height: 1.2)))),
-                        ),
-                      ),
-                      Padding(padding: EdgeInsets.only(right: 12)),
-                      CircleAvatar(
-                        backgroundColor: Colors.lightBlueAccent,
-                        radius: 18.0,
-                        child: Center(
-                          child: Container(
-                              child: Text("3",
-                                  style: GoogleFonts.lato(
-                                      textStyle: TextStyle(
-                                          fontSize: 16.0,
-                                          color: Colors.black,
-                                          fontWeight: FontWeight.bold,
-                                          height: 1.2)))),
-                        ),
-                      ),
+                      
                     ],
                   ),
                 ),
