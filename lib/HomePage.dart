@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'EkranLadowania.dart';
 import 'Lotto.dart';
-import 'EJ.dart';
+import 'MiniLotto.dart';
 
 class HomePage extends StatefulWidget {
 
