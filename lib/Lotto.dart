@@ -3,14 +3,15 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'EkranLadowania.dart';
 
-
 class LottoScreen extends StatefulWidget {
   LottoScreen({required this.lotto});
 
   final Lotto lotto;
+
   @override
   State<LottoScreen> createState() => _LottoScreenState();
 }
+
 class _LottoScreenState extends State<LottoScreen> {
   @override
   Widget build(BuildContext context) {
@@ -23,16 +24,41 @@ class _LottoScreenState extends State<LottoScreen> {
             Center(
                 child: Column(
               children: [
-                Padding(padding: EdgeInsets.only(top: 55),
-                  child: Text(widget.lotto.data + " Lotto:",
-                      style: GoogleFonts.lato(
-                          textStyle: TextStyle(
-                            fontSize: 17.0,
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold,
-                              height: 1.2))),
-                ),
-                Padding(padding: EdgeInsets.only(top: 10),
+                Padding(padding: EdgeInsets.only(top: 55)),
+                Container(
+                    child: Row(
+                  children: [
+                    Expanded(
+                        child: Center(
+                            child: Text("Lotto:",
+                                style: GoogleFonts.lato(
+                                    textStyle: TextStyle(
+                                        fontSize: 17.0,
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.bold,
+                                        height: 1.2))))),
+                    Expanded(
+                        child: Center(
+                            child: Text(widget.lotto.data,
+                                style: GoogleFonts.lato(
+                                    textStyle: TextStyle(
+                                        fontSize: 17.0,
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.bold,
+                                        height: 1.2))))),
+                    Expanded(
+                        child: Center(
+                            child: Text("nr." + widget.lotto.nrlosowania,
+                                style: GoogleFonts.lato(
+                                    textStyle: TextStyle(
+                                        fontSize: 17.0,
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.bold,
+                                        height: 1.2))))),
+                  ],
+                )),
+                Padding(
+                  padding: EdgeInsets.only(top: 10),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -50,16 +76,41 @@ class _LottoScreenState extends State<LottoScreen> {
                     ],
                   ),
                 ),
-                Padding(padding: const EdgeInsets.only(top: 15),
-                  child: Text("${widget.lotto.dataP} Lotto Plus:",
-                      style: GoogleFonts.lato(
-                          textStyle: const TextStyle(
-                              fontSize: 15.0,
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold,
-                              height: 1.2))),
-                ),
-                Padding(padding: const EdgeInsets.only(top: 8),
+                Padding(padding: const EdgeInsets.only(top: 15)),
+                Container(
+                    child: Row(
+                  children: [
+                    Expanded(
+                        child: Center(
+                            child: Text("Lotto Plus:",
+                                style: GoogleFonts.lato(
+                                    textStyle: TextStyle(
+                                        fontSize: 15.0,
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.bold,
+                                        height: 1.2))))),
+                    Expanded(
+                        child: Center(
+                            child: Text(widget.lotto.dataP,
+                                style: GoogleFonts.lato(
+                                    textStyle: TextStyle(
+                                        fontSize: 15.0,
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.bold,
+                                        height: 1.2))))),
+                    Expanded(
+                        child: Center(
+                            child: Text("nr." + widget.lotto.nrlosowaniaP,
+                                style: GoogleFonts.lato(
+                                    textStyle: TextStyle(
+                                        fontSize: 15.0,
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.bold,
+                                        height: 1.2))))),
+                  ],
+                )),
+                Padding(
+                  padding: const EdgeInsets.only(top: 8),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -78,22 +129,23 @@ class _LottoScreenState extends State<LottoScreen> {
                   ),
                 ),
                 const Padding(padding: EdgeInsets.only(top: 15)),
-                const Divider(height: 1,thickness: 1,),
-
+                const Divider(
+                  height: 1,
+                  thickness: 1,
+                ),
               ],
             ))
           ],
-        )
-    );
+        ));
   }
 }
 
-Container yellow(int b){
+Container yellow(int b) {
   Container a = Container();
-  a=Container(
+  a = Container(
       decoration: const BoxDecoration(
         shape: BoxShape.circle,
-        gradient:RadialGradient(
+        gradient: RadialGradient(
           center: Alignment.topLeft, // near the top right
           radius: 1.8,
           colors: <Color>[
@@ -112,25 +164,22 @@ Container yellow(int b){
                       fontSize: 16.0,
                       color: Colors.black,
                       fontWeight: FontWeight.bold,
-                      height: 1.2)))
-      )
-  );
-   return a;
+                      height: 1.2)))));
+  return a;
 }
 
-
-Container blue(int b){
+Container blue(int b) {
   Container a = Container();
-  a=Container(
+  a = Container(
       decoration: const BoxDecoration(
         shape: BoxShape.circle,
-        gradient:RadialGradient(
+        gradient: RadialGradient(
           center: Alignment.topLeft, // near the top right
           radius: 1.6,
           colors: <Color>[
-                  Color(0xFF64C7F9), // yellow sun
-                  Color(0xFF003CFF), // blue sky
-                ],
+            Color(0xFF64C7F9), // yellow sun
+            Color(0xFF003CFF), // blue sky
+          ],
           stops: <double>[0.4, 1.0],
         ),
       ),
@@ -143,8 +192,6 @@ Container blue(int b){
                       fontSize: 12.0,
                       color: Colors.black,
                       fontWeight: FontWeight.bold,
-                      height: 1.2)))
-      )
-  );
+                      height: 1.2)))));
   return a;
 }

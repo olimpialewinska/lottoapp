@@ -39,6 +39,7 @@ class _HomePageState extends State<HomePage> {
               children: screens,
             ),
             bottomNavigationBar: CupertinoTabBar(
+              height: 60,
               backgroundColor: Colors.white,
               activeColor: Colors.blue,
               inactiveColor: Colors.grey,
