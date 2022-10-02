@@ -6,8 +6,8 @@ import 'Lotto.dart';
 import 'MiniLotto.dart';
 
 class HomePage extends StatefulWidget {
-
   HomePage({required this.lotto});
+
   final Lotto lotto;
 
   @override
@@ -20,30 +20,37 @@ class _HomePageState extends State<HomePage> {
 
   @override
   void initState() {
-    screens = [ //kolekcja
+    screens = [
+      //kolekcja
       LottoScreen(lotto: widget.lotto),
-      MiniLotto(lotto: widget.lotto,),
+      MiniLotto(
+        lotto: widget.lotto,
+      ),
     ];
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: IndexedStack(
-        index: _currentIndex,
-        children: screens,
-      ),
-      bottomNavigationBar: CupertinoTabBar(
-        backgroundColor: Colors.white,
-        activeColor: Colors.blue,
-        inactiveColor: Colors.grey,
-        currentIndex: _currentIndex,
-        onTap: (index) =>  setState(() =>  _currentIndex=index),
-        items: [
-        BottomNavigationBarItem(icon: Image.asset("icons/lotto.jpeg")),
-        BottomNavigationBarItem(icon: Image.asset("icons/a.jpg")),
-      ],)
-    );
+    return WillPopScope(
+        child: Scaffold(
+            body: IndexedStack(
+              index: _currentIndex,
+              children: screens,
+            ),
+            bottomNavigationBar: CupertinoTabBar(
+              backgroundColor: Colors.white,
+              activeColor: Colors.blue,
+              inactiveColor: Colors.grey,
+              currentIndex: _currentIndex,
+              onTap: (index) => setState(() => _currentIndex = index),
+              items: [
+                BottomNavigationBarItem(icon: Image.asset("icons/lotto.jpeg")),
+                BottomNavigationBarItem(icon: Image.asset("icons/a.jpg")),
+              ],
+            )),
+        onWillPop: () async {
+          return false;
+        });
   }
 }
