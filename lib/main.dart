@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: Strings.appTitle,
+        title: "Lotto App",
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
@@ -26,6 +26,3 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class Strings{
-  static const String appTitle = 'Clean Air';
-}

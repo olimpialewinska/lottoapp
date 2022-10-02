@@ -22,7 +22,7 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     screens = [ //kolekcja
       LottoScreen(lotto: widget.lotto),
-      MiniLotto(),
+      MiniLotto(lotto: widget.lotto,),
     ];
     super.initState();
   }
@@ -42,7 +42,7 @@ class _HomePageState extends State<HomePage> {
         onTap: (index) =>  setState(() =>  _currentIndex=index),
         items: [
         BottomNavigationBarItem(icon: Image.asset("icons/lotto.jpeg")),
-        BottomNavigationBarItem(icon: Image.asset("icons/ej.png")),
+        BottomNavigationBarItem(icon: Image.asset("icons/a.jpg")),
       ],)
     );
   }

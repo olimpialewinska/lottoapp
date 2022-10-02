@@ -23,221 +23,62 @@ class _LottoScreenState extends State<LottoScreen> {
             Center(
                 child: Column(
               children: [
-                Padding(
-                  padding: EdgeInsets.only(top: 50),
+                Padding(padding: EdgeInsets.only(top: 55),
                   child: Text(widget.lotto.data + " Lotto:",
                       style: GoogleFonts.lato(
                           textStyle: TextStyle(
+                            fontSize: 17.0,
                               color: Colors.black,
-                              fontWeight: FontWeight.normal,
+                              fontWeight: FontWeight.bold,
                               height: 1.2))),
                 ),
-                Padding(
-                  padding: EdgeInsets.only(top: 10),
+                Padding(padding: EdgeInsets.only(top: 10),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      CircleAvatar(
-                        backgroundColor: Colors.yellow,
-                        radius: 20.0,
-                        child: Center(
-                          child: Container(
-                              child: Text(widget.lotto.liczby[0].toString(),
-                                  style: GoogleFonts.lato(
-                                      textStyle: TextStyle(
-                                          fontSize: 16.0,
-                                          color: Colors.black,
-                                          fontWeight: FontWeight.bold,
-                                          height: 1.2)))),
-                        ),
-                      ),
-                      Padding(padding: EdgeInsets.only(right: 15)),
-                      CircleAvatar(
-                        backgroundColor: Colors.yellow,
-                        radius: 20.0,
-                        child: Center(
-                          child: Container(
-                              child: Text(widget.lotto.liczby[1].toString(),
-                                  style: GoogleFonts.lato(
-                                      textStyle: TextStyle(
-                                          fontSize: 16.0,
-                                          color: Colors.black,
-                                          fontWeight: FontWeight.bold,
-                                          height: 1.2)))),
-                        ),
-                      ),
-                      Padding(padding: EdgeInsets.only(right: 15)),
-                      CircleAvatar(
-                        backgroundColor: Colors.yellow,
-                        radius: 20.0,
-                        child: Center(
-                          child: Container(
-                              child: Text(widget.lotto.liczby[2].toString(),
-                                  style: GoogleFonts.lato(
-                                      textStyle: TextStyle(
-                                          fontSize: 16.0,
-                                          color: Colors.black,
-                                          fontWeight: FontWeight.bold,
-                                          height: 1.2)))),
-                        ),
-                      ),
-                      Padding(padding: EdgeInsets.only(right: 15)),
-                      CircleAvatar(
-                        backgroundColor: Colors.yellow,
-                        radius: 20.0,
-                        child: Center(
-                          child: Container(
-                              child: Text(widget.lotto.liczby[3].toString(),
-                                  style: GoogleFonts.lato(
-                                      textStyle: TextStyle(
-                                          fontSize: 16.0,
-                                          color: Colors.black,
-                                          fontWeight: FontWeight.bold,
-                                          height: 1.2)))),
-                        ),
-                      ),
-                      Padding(padding: EdgeInsets.only(right: 15)),
-                      CircleAvatar(
-                        backgroundColor: Colors.yellow,
-                        radius: 20.0,
-                        child: Center(
-                          child: Container(
-                              child: Text(widget.lotto.liczby[4].toString(),
-                                  style: GoogleFonts.lato(
-                                      textStyle: TextStyle(
-                                          fontSize: 16.0,
-                                          color: Colors.black,
-                                          fontWeight: FontWeight.bold,
-                                          height: 1.2)))),
-                        ),
-                      ),
-                      Padding(padding: EdgeInsets.only(right: 15)),
-                      CircleAvatar(
-                        backgroundColor: Colors.yellow,
-                        radius: 20.0,
-                        child: Center(
-                          child: Container(
-                              child: Text(widget.lotto.liczby[5].toString(),
-                                  style: GoogleFonts.lato(
-                                      textStyle: TextStyle(
-                                          fontSize: 16.0,
-                                          color: Colors.black,
-                                          fontWeight: FontWeight.bold,
-                                          height: 1.2)))),
-                        ),
-                      ),
+                      yellow(widget.lotto.liczby[0]),
+                      const Padding(padding: EdgeInsets.only(right: 15)),
+                      yellow(widget.lotto.liczby[1]),
+                      const Padding(padding: EdgeInsets.only(right: 15)),
+                      yellow(widget.lotto.liczby[2]),
+                      const Padding(padding: EdgeInsets.only(right: 15)),
+                      yellow(widget.lotto.liczby[3]),
+                      const Padding(padding: EdgeInsets.only(right: 15)),
+                      yellow(widget.lotto.liczby[4]),
+                      const Padding(padding: EdgeInsets.only(right: 15)),
+                      yellow(widget.lotto.liczby[5]),
                     ],
                   ),
                 ),
-                Padding(
-                  padding: EdgeInsets.only(top: 15),
-                  child: Text(widget.lotto.dataP+" Lotto Plus:",
+                Padding(padding: const EdgeInsets.only(top: 15),
+                  child: Text("${widget.lotto.dataP} Lotto Plus:",
                       style: GoogleFonts.lato(
-                          textStyle: TextStyle(
-                              fontSize: 12.0,
+                          textStyle: const TextStyle(
+                              fontSize: 15.0,
                               color: Colors.black,
-                              fontWeight: FontWeight.normal,
+                              fontWeight: FontWeight.bold,
                               height: 1.2))),
                 ),
-                Padding(
-                  padding: EdgeInsets.only(top: 8),
+                Padding(padding: const EdgeInsets.only(top: 8),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      CircleAvatar(
-                        backgroundColor: Colors.lightBlueAccent,
-                        radius: 15.0,
-                        child: Center(
-                          child: Container(
-                              child: Text(widget.lotto.liczbyP[0].toString(),
-                                  style: GoogleFonts.lato(
-                                      textStyle: TextStyle(
-                                          fontSize: 12.0,
-                                          color: Colors.black,
-                                          fontWeight: FontWeight.bold,
-                                          height: 1.2)))),
-                        ),
-                      ),
-                      Padding(padding: EdgeInsets.only(right: 10)),
-                      CircleAvatar(
-                        backgroundColor: Colors.lightBlueAccent,
-                        radius: 15.0,
-                        child: Center(
-                          child: Container(
-                              child: Text(widget.lotto.liczbyP[1].toString(),
-                                  style: GoogleFonts.lato(
-                                      textStyle: TextStyle(
-                                          fontSize: 12.0,
-                                          color: Colors.black,
-                                          fontWeight: FontWeight.bold,
-                                          height: 1.2)))),
-                        ),
-                      ),
-                      Padding(padding: EdgeInsets.only(right: 10)),
-                      CircleAvatar(
-                        backgroundColor: Colors.lightBlueAccent,
-                        radius: 15.0,
-                        child: Center(
-                          child: Container(
-                              child: Text(widget.lotto.liczbyP[2].toString(),
-                                  style: GoogleFonts.lato(
-                                      textStyle: TextStyle(
-                                          fontSize: 12.0,
-                                          color: Colors.black,
-                                          fontWeight: FontWeight.bold,
-                                          height: 1.2)))),
-                        ),
-                      ),
-                      Padding(padding: EdgeInsets.only(right: 10)),
-                      CircleAvatar(
-                        backgroundColor: Colors.lightBlueAccent,
-                        radius: 15.0,
-                        child: Center(
-                          child: Container(
-                              child: Text(widget.lotto.liczbyP[3].toString(),
-                                  style: GoogleFonts.lato(
-                                      textStyle: TextStyle(
-                                          fontSize: 12.0,
-                                          color: Colors.black,
-                                          fontWeight: FontWeight.bold,
-                                          height: 1.2)))),
-                        ),
-                      ),
-                      Padding(padding: EdgeInsets.only(right: 10)),
-                      CircleAvatar(
-                        backgroundColor: Colors.lightBlueAccent,
-                        radius: 15.0,
-                        child: Center(
-                          child: Container(
-                              child: Text(widget.lotto.liczbyP[4].toString(),
-                                  style: GoogleFonts.lato(
-                                      textStyle: TextStyle(
-                                          fontSize: 12.0,
-                                          color: Colors.black,
-                                          fontWeight: FontWeight.bold,
-                                          height: 1.2)))),
-                        ),
-                      ),
-                      Padding(padding: EdgeInsets.only(right: 10)),
-                      CircleAvatar(
-                        backgroundColor: Colors.lightBlueAccent,
-                        radius: 15.0,
-                        child: Center(
-                          child: Container(
-                              child: Text(widget.lotto.liczbyP[5].toString(),
-                                  style: GoogleFonts.lato(
-                                      textStyle: TextStyle(
-                                          fontSize: 12.0,
-                                          color: Colors.black,
-                                          fontWeight: FontWeight.bold,
-                                          height: 1.2)))),
-                        ),
-                      ),
+                      blue(widget.lotto.liczbyP[0]),
+                      const Padding(padding: EdgeInsets.only(right: 10)),
+                      blue(widget.lotto.liczbyP[1]),
+                      const Padding(padding: EdgeInsets.only(right: 10)),
+                      blue(widget.lotto.liczbyP[2]),
+                      const Padding(padding: EdgeInsets.only(right: 10)),
+                      blue(widget.lotto.liczbyP[3]),
+                      const Padding(padding: EdgeInsets.only(right: 10)),
+                      blue(widget.lotto.liczbyP[4]),
+                      const Padding(padding: EdgeInsets.only(right: 10)),
+                      blue(widget.lotto.liczbyP[5]),
                     ],
                   ),
                 ),
-                Padding(padding: EdgeInsets.only(top: 15)),
-                Divider(height: 1,thickness: 1,),
+                const Padding(padding: EdgeInsets.only(top: 15)),
+                const Divider(height: 1,thickness: 1,),
 
               ],
             ))
@@ -245,4 +86,65 @@ class _LottoScreenState extends State<LottoScreen> {
         )
     );
   }
+}
+
+Container yellow(int b){
+  Container a = Container();
+  a=Container(
+      decoration: const BoxDecoration(
+        shape: BoxShape.circle,
+        gradient:RadialGradient(
+          center: Alignment.topLeft, // near the top right
+          radius: 1.8,
+          colors: <Color>[
+            Color(0xFFFDFD11), // yellow sun
+            Color(0xFFE49103), // blue sky
+          ],
+          stops: <double>[0.3, 1.0],
+        ),
+      ),
+      child: CircleAvatar(
+          radius: 20.0,
+          backgroundColor: Colors.transparent,
+          child: Text(b.toString(),
+              style: GoogleFonts.lato(
+                  textStyle: const TextStyle(
+                      fontSize: 16.0,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                      height: 1.2)))
+      )
+  );
+   return a;
+}
+
+
+Container blue(int b){
+  Container a = Container();
+  a=Container(
+      decoration: const BoxDecoration(
+        shape: BoxShape.circle,
+        gradient:RadialGradient(
+          center: Alignment.topLeft, // near the top right
+          radius: 1.6,
+          colors: <Color>[
+                  Color(0xFF64C7F9), // yellow sun
+                  Color(0xFF003CFF), // blue sky
+                ],
+          stops: <double>[0.4, 1.0],
+        ),
+      ),
+      child: CircleAvatar(
+          radius: 15.0,
+          backgroundColor: Colors.transparent,
+          child: Text(b.toString(),
+              style: GoogleFonts.lato(
+                  textStyle: const TextStyle(
+                      fontSize: 12.0,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                      height: 1.2)))
+      )
+  );
+  return a;
 }

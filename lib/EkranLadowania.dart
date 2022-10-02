@@ -50,22 +50,22 @@ class _EkranLadowaniaState extends State<EkranLadowania> {
 }
 
 class Lotto {
+  String dataM ="";
   String data ="";
   String dataP ="";
   List<int> liczby = <int>[];
+  List<int> liczbyM = <int>[];
   List<int> liczbyP = <int>[];
 
 
 
   Lotto(Map<String, dynamic> jsonBody) {
-    String numerki = jsonBody['Lotto']['numerki'].toString();
-    String zladata= jsonBody['Lotto']['data_losowania'].toString();
-    String numerkiP = jsonBody['LottoPlus']['numerki'].toString();
-    String zladataP = jsonBody['LottoPlus']['data_losowania'].toString();
-    data = datalosowania(zladata);
-    liczby= splitsort(numerki);
-    liczbyP= splitsort(numerkiP);
-    dataP = datalosowania(zladataP);
+    data = datalosowania(jsonBody['Lotto']['data_losowania'].toString());
+    liczby= splitsort(jsonBody['Lotto']['numerki'].toString());
+    dataM = datalosowania(jsonBody['Mini']['data_losowania'].toString());
+    liczbyM= splitsort(jsonBody['Mini']['numerki'].toString());
+    liczbyP= splitsort(jsonBody['LottoPlus']['numerki'].toString());
+    dataP = datalosowania(jsonBody['LottoPlus']['data_losowania'].toString());
 
   }
 

@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'EkranLadowania.dart';
+import 'Lotto.dart';
+
 class MiniLotto extends StatefulWidget {
+  final Lotto lotto;
+
+  MiniLotto({required this.lotto});
   @override
   State<MiniLotto> createState() => _MiniLottoState();
 }
@@ -19,102 +25,33 @@ class _MiniLottoState extends State<MiniLotto> {
                 child: Column(
               children: [
                 Padding(
-                  padding: EdgeInsets.only(top: 50),
-                  child: Text("08-07-2022, EuroJackpot:",
+                  padding: EdgeInsets.only(top: 55),
+                  child: Text( widget.lotto.dataM.toString() + " Mini Lotto:",
                       style: GoogleFonts.lato(
                           textStyle: TextStyle(
+                            fontSize: 17.0,
                               color: Colors.black,
-                              fontWeight: FontWeight.normal,
+                              fontWeight: FontWeight.bold,
                               height: 1.2))),
                 ),
-                Padding(
-                  padding: EdgeInsets.only(top: 10),
+                Padding(padding: EdgeInsets.only(top: 10),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      CircleAvatar(
-                        backgroundColor: Colors.yellow,
-                        radius: 18.0,
-                        child: Center(
-                          child: Container(
-                              child: Text("3",
-                                  style: GoogleFonts.lato(
-                                      textStyle: TextStyle(
-                                          fontSize: 16.0,
-                                          color: Colors.black,
-                                          fontWeight: FontWeight.bold,
-                                          height: 1.2)))),
-                        ),
-                      ),
+                      yellow(widget.lotto.liczbyM[0]),
                       Padding(padding: EdgeInsets.only(right: 12)),
-                      CircleAvatar(
-                        backgroundColor: Colors.yellow,
-                        radius: 18.0,
-                        child: Center(
-                          child: Container(
-                              child: Text("3",
-                                  style: GoogleFonts.lato(
-                                      textStyle: TextStyle(
-                                          fontSize: 16.0,
-                                          color: Colors.black,
-                                          fontWeight: FontWeight.bold,
-                                          height: 1.2)))),
-                        ),
-                      ),
+                      yellow(widget.lotto.liczbyM[1]),
                       Padding(padding: EdgeInsets.only(right: 12)),
-                      CircleAvatar(
-                        backgroundColor: Colors.yellow,
-                        radius: 18.0,
-                        child: Center(
-                          child: Container(
-                              child: Text("3",
-                                  style: GoogleFonts.lato(
-                                      textStyle: TextStyle(
-                                          fontSize: 16.0,
-                                          color: Colors.black,
-                                          fontWeight: FontWeight.bold,
-                                          height: 1.2)))),
-                        ),
-                      ),
+                      yellow(widget.lotto.liczbyM[2]),
                       Padding(padding: EdgeInsets.only(right: 12)),
-                      CircleAvatar(
-                        backgroundColor: Colors.yellow,
-                        radius: 18.0,
-                        child: Center(
-                          child: Container(
-                              child: Text("3",
-                                  style: GoogleFonts.lato(
-                                      textStyle: TextStyle(
-                                          fontSize: 16.0,
-                                          color: Colors.black,
-                                          fontWeight: FontWeight.bold,
-                                          height: 1.2)))),
-                        ),
-                      ),
+                      yellow(widget.lotto.liczbyM[3]),
                       Padding(padding: EdgeInsets.only(right: 12)),
-                      CircleAvatar(
-                        backgroundColor: Colors.yellow,
-                        radius: 18.0,
-                        child: Center(
-                          child: Container(
-                              child: Text("3",
-                                  style: GoogleFonts.lato(
-                                      textStyle: TextStyle(
-                                          fontSize: 16.0,
-                                          color: Colors.black,
-                                          fontWeight: FontWeight.bold,
-                                          height: 1.2)))),
-                        ),
-                      ),
-                      
+                      yellow(widget.lotto.liczbyM[4]),
                     ],
                   ),
                 ),
                 Padding(padding: EdgeInsets.only(top: 15)),
-                Divider(
-                  height: 1,
-                  thickness: 1,
-                ),
+                Divider(height: 1, thickness: 1,),
               ],
             ))
           ],
